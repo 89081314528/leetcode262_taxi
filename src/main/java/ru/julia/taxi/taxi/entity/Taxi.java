@@ -8,7 +8,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "taxi")
 public class Taxi {
-    @Column
+    @Column (name = "taxi_id") // я правильно назвала столбец? или надо было так назвать поле?
     @Id
     Long id;
     @Column
