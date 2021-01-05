@@ -6,16 +6,17 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "taxi")
+@Table(name = "taxies")// таблица - во множ, сущность в единственном
 public class Taxi {
-    @Column (name = "taxi_id") // я правильно назвала столбец? или надо было так назвать поле?
+    @Column(name = "taxi_id") // в един числе
     @Id
     Long id;
-    @Column
+    // обычно указывают название колонок в таблице, даже если они совпадают с названиями полей
+    @Column(name = "status")
     String status;
-    @Column
-    Long Data;
-    @Column
+    @Column(name = "date")
+    Long date;
+    @Column(name = "banned")
     String banned;
 
     public Long getId() {
@@ -34,12 +35,12 @@ public class Taxi {
         this.status = status;
     }
 
-    public Long getData() {
-        return Data;
+    public Long getDate() {
+        return date;
     }
 
-    public void setData(Long data) {
-        Data = data;
+    public void setDate(Long date) {
+        this.date = date;
     }
 
     public String getBanned() {
@@ -56,7 +57,7 @@ public class Taxi {
     public Taxi(Long id, String status, Long data, String banned) {
         this.id = id;
         this.status = status;
-        Data = data;
+        this.date = data;
         this.banned = banned;
     }
 }

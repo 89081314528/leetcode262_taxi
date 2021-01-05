@@ -56,6 +56,6 @@ public class leetcode262_taxiController {
 
     @RequestMapping("/rate")
     public List<Rate> rate() {
-        return taxiService.rate();
+        return taxiService.getRates();
     }
 }

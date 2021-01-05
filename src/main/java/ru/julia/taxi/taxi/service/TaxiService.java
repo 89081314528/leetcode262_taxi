@@ -5,5 +5,5 @@ import ru.julia.taxi.taxi.dto.Rate;
 import java.util.List;
 
 public interface TaxiService {
-    public List<Rate> rate();
+    public List<Rate> getRates();
 }

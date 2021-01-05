@@ -1,19 +1,19 @@
 package ru.julia.taxi.taxi.dto;
 
 public class Rate {
-    Long data;
-    Double rate;
+    final Long date;
+    final Double rate;
 
-    public Long getData() {
-        return data;
+    public Long getDate() {
+        return date;
     }
 
     public Double getRate() {
         return rate;
     }
 
-    public Rate(Long data, Double rate) {
-        this.data = data;
+    public Rate(Long date, Double rate) {
+        this.date = date;
         this.rate = rate;
     }
 }
