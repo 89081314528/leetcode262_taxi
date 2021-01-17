@@ -14,7 +14,7 @@ public class Taxi {
     // обычно указывают название колонок в таблице, даже если они совпадают с названиями полей
     @Column(name = "status")
     String status;
-    @Column(name = "date")
+    @Column(name = "travel_date")
     Long date;
     @Column(name = "banned")
     String banned;

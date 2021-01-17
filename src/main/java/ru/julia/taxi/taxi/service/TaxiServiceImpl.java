@@ -4,7 +4,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import ru.julia.taxi.taxi.dto.Rate;
 import ru.julia.taxi.taxi.entity.Taxi;
-import ru.julia.taxi.taxi.repozitories.TaxiRepository;
+import ru.julia.taxi.taxi.repositories.TaxiRepository;
 
 import java.util.ArrayList;
 import java.util.List;

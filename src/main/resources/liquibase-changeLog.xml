@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="Julia" id="17/01/2/1">
+        <createTable tableName="taxies">
+            <column name="taxi_id" type="bigint">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="status" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="travel_date" type="bigint">
+                <constraints nullable="false"/>
+            </column>
+            <column name="banned" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+    <changeSet author="Julia" id="17/01/2/2">
+        <insert tableName="taxies">
+            <column name="taxi_id">1</column>
+            <column name="status">completed</column>
+            <column name="travel_date">1</column>
+            <column name="banned">no</column>
+        </insert>
+        <insert tableName="taxies">
+            <column name="taxi_id">2</column>
+            <column name="status">cancelled</column>
+            <column name="travel_date">1</column>
+            <column name="banned">yes</column>
+        </insert>
+        <insert tableName="taxies">
+            <column name="taxi_id">3</column>
+            <column name="status">completed</column>
+            <column name="travel_date">1</column>
+            <column name="banned">no</column>
+        </insert>
+        <insert tableName="taxies">
+            <column name="taxi_id">4</column>
+            <column name="status">cancelled</column>
+            <column name="travel_date">1</column>
+            <column name="banned">no</column>
+        </insert>
+        <insert tableName="taxies">
+            <column name="taxi_id">5</column>
+            <column name="status">completed</column>
+            <column name="travel_date">2</column>
+            <column name="banned">no</column>
+        </insert>
+        <insert tableName="taxies">
+            <column name="taxi_id">6</column>
+            <column name="status">completed</column>
+            <column name="travel_date">2</column>
+            <column name="banned">yes</column>
+        </insert>
+        <insert tableName="taxies">
+            <column name="taxi_id">7</column>
+            <column name="status">completed</column>
+            <column name="travel_date">2</column>
+            <column name="banned">no</column>
+        </insert>
+        <insert tableName="taxies">
+            <column name="taxi_id">8</column>
+            <column name="status">completed</column>
+            <column name="travel_date">3</column>
+            <column name="banned">yes</column>
+        </insert>
+        <insert tableName="taxies">
+            <column name="taxi_id">9</column>
+            <column name="status">completed</column>
+            <column name="travel_date">3</column>
+            <column name="banned">no</column>
+        </insert>
+        <insert tableName="taxies">
+            <column name="taxi_id">10</column>
+            <column name="status">cancelled</column>
+            <column name="travel_date">3</column>
+            <column name="banned">no</column>
+        </insert>
+        <insert tableName="taxies">
+            <column name="taxi_id">11</column>
+            <column name="status">test</column>
+            <column name="travel_date">3</column>
+            <column name="banned">test</column>
+        </insert>
+    </changeSet>
+
+    <changeSet author="Julia" id="17/01/2/3">
+        <delete tableName="taxies">
+            <where>taxi_id = 11</where>
+        </delete>
+    </changeSet>
+</databaseChangeLog>

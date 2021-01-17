@@ -1,4 +1,4 @@
-package ru.julia.taxi.taxi.repozitories;
+package ru.julia.taxi.taxi.repositories;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import ru.julia.taxi.taxi.entity.Taxi;
